@@ -33,13 +33,14 @@ int main()
     // transpose matrix
     
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            int temp = arr[i][j];
+        for(int j=0;j<=i;j++){ //for(j=i;j<n;j++)
+            int temp = arr[i][j]; //swap(arr[i][j],arr[j][i]);
             arr[i][j]=arr[j][i];
             arr[j][i]=temp;
         }
     }
     cout<<endl;
+    //printing output
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             cout<<arr[i][j]<<" ";
